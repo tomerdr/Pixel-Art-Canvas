@@ -36,5 +36,8 @@ function clickCol(event) {
     event.preventDefault();
     event.stopPropagation();
     let td = event.target;
+    if (td.style.backgroundColor == color) {
+        td.style.removeProperty("background-color")
+    }
     td.style.backgroundColor = color;
 }
